@@ -8,8 +8,8 @@ st.title("Finetunned Summarization Model")
 text_input = st.text_area("Copy paste the text here...")
 st.markdown("<br>" , unsafe_allow_html= True)
 # Initialize model and tokenizer
-model_path = "./tunned_bart"
-model = BartForConditionalGeneration.from_pretrained(model_path)
+model_name = "dsharsh/finetunned_bart"
+model = BartForConditionalGeneration.from_pretrained(model_name)
 tokenizer = BartTokenizer.from_pretrained("facebook/bart-base")
 
 col1 , col2 , col3 = st.columns(3)
