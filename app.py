@@ -20,7 +20,7 @@ with col2:
 if submit_btn:
 
     # input vector embedding
-    tokenized_input = tokenizer(text_inputw,max_length=1000 , return_tensors="pt",truncation = True , padding = "max_length")
+    tokenized_input = tokenizer(text_input,max_length=1000 , return_tensors="pt",truncation = True , padding = "max_length")
     # output vector embedding
     tokenized_output = model.generate(tokenized_input["input_ids"] , max_length= 350 , early_stopping = True )
     # final response
